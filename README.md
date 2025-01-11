@@ -2,6 +2,8 @@
 This project demonstrates an example of the VLSI flow used to synthesize a 9-bit microprocessor,
 Made by the open-source tool Qflow. The tool takes the processor's Verilog RTL (Register-Transfer Level) code and,
 through a series of automated steps, generates a GDSII file that is ready for fabrication at a chip manufacturing facility (Fab lab).
+<img src='images/schematic.png'>
+
 
 <h2>Objective</h2>
 The goal of this project is to illustrate the complete VLSI design flow, starting from a high-level Verilog description of a 9-bit microprocessor
@@ -21,4 +23,6 @@ Magic: Physical layout generation and verification.
 Netgen: Layout vs. schematic (LVS) checks.
 
 the following image represente the final results of the flow , it's a physical layout.
+
+
 <img src='images/top-level.png'>
