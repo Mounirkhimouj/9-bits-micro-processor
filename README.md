@@ -21,4 +21,4 @@ Magic: Physical layout generation and verification.
 Netgen: Layout vs. schematic (LVS) checks.
 
 the following image represente the final results of the flow , it's a physical layout.
-<img src='/home/mounir/Desktop/proc_9/Documentation/top-level.png'>
+<img src='images/top-level.png'>
