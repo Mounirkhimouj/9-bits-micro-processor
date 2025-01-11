@@ -29,3 +29,6 @@ the following image represente the final results of the flow , it's a physical l
 <div align="center">
 <img src='images/top-level.png' width="500">
 </div>
+
+The processor consists of 32 cells, ranging from NAND gates to simple inverters, all packed into a compact surface area of 11.448 µm²,
+This efficient design achieves a clock frequency of up to 655.5 MHz, 
