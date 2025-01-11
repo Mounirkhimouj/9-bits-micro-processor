@@ -2,6 +2,7 @@
 This project demonstrates an example of the VLSI flow used to synthesize a 9-bit microprocessor,
 Made by the open-source tool Qflow. The tool takes the processor's Verilog RTL (Register-Transfer Level) code and,
 through a series of automated steps, generates a GDSII file that is ready for fabrication at a chip manufacturing facility (Fab lab).
+
 <div align="center">
 <img src='images/schematic.png' width="500">
 </div>
