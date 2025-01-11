@@ -1,0 +1,88 @@
+* XSpice netlist created from SPICE and liberty sources by spi2xspice.py
+*SPICE netlist created from verilog structural netlist module processor_9_bits by vlog2Spice (qflow)
+** Start of included library /usr/local/share/qflow/tech/osu050/osu050_stdcells.sp
+** End of included library /usr/local/share/qflow/tech/osu050/osu050_stdcells.sp
+.subckt processor_9_bits a_vdd a_gnd a_DataIn a_Done a_Run a_aResetn a_clock
+A_23_ [Tcycle_Q_3_ Tcycle_Q_0_ Tcycle_Q_1_] _4_ d_lut_NOR3X1
+A_24_ [Tcycle_Q_3_] _5_ d_lut_INVX1
+A_25_ [_5_ I_1_ I_2_] _6_ d_lut_AOI21X1
+A_26_ [I_1_ _4_ _6_] _7_ d_lut_OAI21X1
+A_27_ [_7_] _17_ d_lut_INVX1
+A_28_ [Tcycle_Q_2_] _8_ d_lut_INVX1
+A_29_ [Run] _9_ d_lut_INVX1
+A_30_ [aResetn _5_] _10_ d_lut_NAND2X1
+A_31_ [Tcycle_Q_0_ _9_ _10_] _11_ d_lut_AOI21X1
+A_32_ [_8_ _7_ _11_] _3_ d_lut_OAI21X1
+A_33_ [Tcycle_Q_3_ Tcycle_Q_1_] _12_ d_lut_OR2X2
+A_34_ [Tcycle_Q_2_ _12_] IRin d_lut_NOR2X1
+A_35_ [I_1_] _13_ d_lut_INVX1
+A_36_ [Tcycle_Q_0_ _12_ _13_] _14_ d_lut_OAI21X1
+A_37_ [aResetn Tcycle_Q_2_] _15_ d_lut_NAND2X1
+A_38_ [_14_ _6_ _15_] _0_ d_lut_AOI21X1
+A_39_ [Tcycle_Q_0_ aResetn Run] _16_ d_lut_NAND3X1
+A_40_ [_16_] _1_ d_lut_INVX1
+A_41_ [Tcycle_Q_1_ aResetn] _2_ d_lut_AND2X2
+A_42_ [_17_] Done d_lut_BUFX2
+A_43_ _3_ clock NULL NULL Tcycle_Q_0_ NULL ddflop
+A_44_ _0_ clock NULL NULL Tcycle_Q_1_ NULL ddflop
+A_45_ _1_ clock NULL NULL Tcycle_Q_2_ NULL ddflop
+A_46_ _2_ clock NULL NULL Tcycle_Q_3_ NULL ddflop
+A_47_ [I_1_] _19_ d_lut_INVX1
+A_48_ [IRin gnd] _20_ d_lut_NAND2X1
+A_49_ [IRin _19_ _20_] _18__1_ d_lut_OAI21X1
+A_50_ [I_2_] _21_ d_lut_INVX1
+A_51_ [IRin gnd] _22_ d_lut_NAND2X1
+A_52_ [IRin _21_ _22_] _18__2_ d_lut_OAI21X1
+A_53_ _18__1_ clock NULL NULL I_1_ NULL ddflop
+A_54_ _18__2_ clock NULL NULL I_2_ NULL ddflop
+
+.model todig_5v adc_bridge(in_high=3.3333333333333335 in_low=1.6666666666666667 rise_delay=10n fall_delay=10n)
+.model toana_5v dac_bridge(out_high=5.0 out_low=0)
+
+.model ddflop d_dff(ic=0 rise_delay=1n fall_delay=1n)
+.model dlatch d_dlatch(ic=0 rise_delay=1n fall_delay=1n)
+.model dzero d_pulldown(load=1p)
+.model done d_pullup(load=1p)
+
+AA2D1 [a_vdd] [vdd] todig_5v
+AA2D2 [a_gnd] [gnd] todig_5v
+AA2D3 [a_DataIn] [DataIn] todig_5v
+AD2A1 [Done] [a_Done] toana_5v
+AA2D4 [a_Run] [Run] todig_5v
+AA2D5 [a_aResetn] [aResetn] todig_5v
+AA2D6 [a_clock] [clock] todig_5v
+
+.ends
+
+* NOR3X1 (!((A+B)+C))
+.model d_lut_NOR3X1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10000000")
+* INVX1 (!A)
+.model d_lut_INVX1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* AOI21X1 (!((A B)+C))
+.model d_lut_AOI21X1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11100000")
+* OAI21X1 (!((A+B) C))
+.model d_lut_OAI21X1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111000")
+* NAND2X1 (!(A B))
+.model d_lut_NAND2X1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1110")
+* OR2X2 (A+B)
+.model d_lut_OR2X2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0111")
+* NOR2X1 (!(A+B))
+.model d_lut_NOR2X1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1000")
+* NAND3X1 (!((A B) C))
+.model d_lut_NAND3X1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111110")
+* AND2X2 (A B)
+.model d_lut_AND2X2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0001")
+* BUFX2 A
+.model d_lut_BUFX2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* DFFPOSX1 DS0000
+.end

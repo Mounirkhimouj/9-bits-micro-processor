@@ -1,0 +1,1300 @@
+Qflow synthesis logfile created on 01 يناير, 2025 +01 18:05:29
+Running yosys for verilog parsing and synthesis
+yosys  -s processor_9_bits.ys
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Executing script file `processor_9_bits.ys' --
+
+1. Executing Liberty frontend.
+Imported 39 cell types from liberty file.
+
+2. Executing Verilog-2005 frontend: /home/mounir/Desktop/proc_9/source/processor_9_bits.v
+Parsing Verilog input from `/home/mounir/Desktop/proc_9/source/processor_9_bits.v' to AST representation.
+Warning: Literal has a width of 8 bit, but value requires 10 bit. (/home/mounir/Desktop/proc_9/source/processor_9_bits.v:124)
+Warning: Literal has a width of 8 bit, but value requires 9 bit. (/home/mounir/Desktop/proc_9/source/processor_9_bits.v:125)
+Generating RTLIL representation for module `\processor_9_bits'.
+Note: Assuming pure combinatorial block at /home/mounir/Desktop/proc_9/source/processor_9_bits.v:104 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at /home/mounir/Desktop/proc_9/source/processor_9_bits.v:113 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\dec3to8'.
+Note: Assuming pure combinatorial block at /home/mounir/Desktop/proc_9/source/processor_9_bits.v:160 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Generating RTLIL representation for module `\reg_n'.
+Successfully finished Verilog frontend.
+
+3. Executing SYNTH pass.
+
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1.1. Analyzing design hierarchy..
+Top module:  \processor_9_bits
+Used module:     \reg_n
+Used module:     \dec3to8
+
+3.1.2. Executing AST frontend in derive mode using pre-parsed AST for module `\reg_n'.
+Parameter \N = 9
+Generating RTLIL representation for module `$paramod\reg_n\N=9'.
+
+3.1.3. Executing AST frontend in derive mode using pre-parsed AST for module `\reg_n'.
+Parameter \N = 9
+Found cached RTLIL representation for module `$paramod\reg_n\N=9'.
+
+3.1.4. Executing AST frontend in derive mode using pre-parsed AST for module `\reg_n'.
+Parameter \N = 9
+Found cached RTLIL representation for module `$paramod\reg_n\N=9'.
+
+3.1.5. Executing AST frontend in derive mode using pre-parsed AST for module `\reg_n'.
+Parameter \N = 9
+Found cached RTLIL representation for module `$paramod\reg_n\N=9'.
+
+3.1.6. Executing AST frontend in derive mode using pre-parsed AST for module `\reg_n'.
+Parameter \N = 9
+Found cached RTLIL representation for module `$paramod\reg_n\N=9'.
+
+3.1.7. Executing AST frontend in derive mode using pre-parsed AST for module `\reg_n'.
+Parameter \N = 9
+Found cached RTLIL representation for module `$paramod\reg_n\N=9'.
+
+3.1.8. Executing AST frontend in derive mode using pre-parsed AST for module `\reg_n'.
+Parameter \N = 9
+Found cached RTLIL representation for module `$paramod\reg_n\N=9'.
+
+3.1.9. Executing AST frontend in derive mode using pre-parsed AST for module `\reg_n'.
+Parameter \N = 9
+Found cached RTLIL representation for module `$paramod\reg_n\N=9'.
+
+3.1.10. Executing AST frontend in derive mode using pre-parsed AST for module `\reg_n'.
+Parameter \N = 9
+Found cached RTLIL representation for module `$paramod\reg_n\N=9'.
+
+3.1.11. Executing AST frontend in derive mode using pre-parsed AST for module `\reg_n'.
+Parameter \N = 9
+Found cached RTLIL representation for module `$paramod\reg_n\N=9'.
+
+3.1.12. Executing AST frontend in derive mode using pre-parsed AST for module `\reg_n'.
+Parameter \N = 9
+Found cached RTLIL representation for module `$paramod\reg_n\N=9'.
+
+3.1.13. Analyzing design hierarchy..
+Top module:  \processor_9_bits
+Used module:     $paramod\reg_n\N=9
+Used module:     \dec3to8
+
+3.1.14. Analyzing design hierarchy..
+Top module:  \processor_9_bits
+Used module:     $paramod\reg_n\N=9
+Used module:     \dec3to8
+Removing unused module `\reg_n'.
+Removed 1 unused modules.
+Warning: Resizing cell port processor_9_bits.Reg9.D from 1 bits to 9 bits.
+
+3.2. Executing PROC pass (convert processes to netlists).
+
+3.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 1 dead cases from process $proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:120$15 in module processor_9_bits.
+Marked 1 switch rules as full_case in process $proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:120$15 in module processor_9_bits.
+Marked 1 switch rules as full_case in process $proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:104$10 in module processor_9_bits.
+Removed 1 dead cases from process $proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:62$9 in module processor_9_bits.
+Marked 4 switch rules as full_case in process $proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:62$9 in module processor_9_bits.
+Removed 1 dead cases from process $proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:50$4 in module processor_9_bits.
+Marked 1 switch rules as full_case in process $proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:50$4 in module processor_9_bits.
+Marked 1 switch rules as full_case in process $proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:41$2 in module processor_9_bits.
+Removed a total of 3 dead cases.
+
+3.2.3. Executing PROC_INIT pass (extract init attributes).
+
+3.2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+3.2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod\reg_n\N=9.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:174$21'.
+     1/1: $0\Q[8:0]
+Creating decoders for process `\dec3to8.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:160$16'.
+     1/1: $0\out[7:0]
+Creating decoders for process `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:120$15'.
+     1/2: $1\Bus_Wires[8:0]
+     2/2: $0\Bus_Wires[8:0]
+Creating decoders for process `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:113$14'.
+     1/1: $0\sel[9:0]
+Creating decoders for process `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:104$10'.
+     1/2: $1\sum[8:0]
+     2/2: $0\sum[8:0]
+Creating decoders for process `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:62$9'.
+     1/29: $3\Done[0:0]
+     2/29: $3\Rin[7:0]
+     3/29: $2\Gout[0:0]
+     4/29: $2\Gin[0:0]
+     5/29: $3\Rout[7:0]
+     6/29: $2\AddSub[0:0]
+     7/29: $2\Done[0:0]
+     8/29: $2\Rin[7:0]
+     9/29: $2\Rout[7:0]
+    10/29: $2\Ain[0:0]
+    11/29: $2\DinOut[0:0]
+    12/29: $1\IRin[0:0]
+    13/29: $1\AddSub[0:0]
+    14/29: $1\Gin[0:0]
+    15/29: $1\Ain[0:0]
+    16/29: $1\Gout[0:0]
+    17/29: $1\DinOut[0:0]
+    18/29: $1\Rout[7:0]
+    19/29: $1\Done[0:0]
+    20/29: $1\Rin[7:0]
+    21/29: $0\AddSub[0:0]
+    22/29: $0\IRin[0:0]
+    23/29: $0\Gin[0:0]
+    24/29: $0\Ain[0:0]
+    25/29: $0\Gout[0:0]
+    26/29: $0\DinOut[0:0]
+    27/29: $0\Rout[7:0]
+    28/29: $0\Done[0:0]
+    29/29: $0\Rin[7:0]
+Creating decoders for process `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:50$4'.
+     1/2: $1\Tcycle_D[1:0]
+     2/2: $0\Tcycle_D[1:0]
+Creating decoders for process `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:41$2'.
+     1/1: $0\Tcycle_Q[1:0]
+Creating decoders for process `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:31$1'.
+     1/1: $0\I[2:0]
+
+3.2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\dec3to8.\out' from process `\dec3to8.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:160$16'.
+No latch inferred for signal `\processor_9_bits.\Bus_Wires' from process `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:120$15'.
+No latch inferred for signal `\processor_9_bits.\sel' from process `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:113$14'.
+No latch inferred for signal `\processor_9_bits.\sum' from process `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:104$10'.
+No latch inferred for signal `\processor_9_bits.\Rin' from process `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:62$9'.
+No latch inferred for signal `\processor_9_bits.\Done' from process `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:62$9'.
+No latch inferred for signal `\processor_9_bits.\Rout' from process `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:62$9'.
+No latch inferred for signal `\processor_9_bits.\DinOut' from process `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:62$9'.
+No latch inferred for signal `\processor_9_bits.\Gout' from process `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:62$9'.
+No latch inferred for signal `\processor_9_bits.\Ain' from process `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:62$9'.
+No latch inferred for signal `\processor_9_bits.\Gin' from process `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:62$9'.
+No latch inferred for signal `\processor_9_bits.\IRin' from process `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:62$9'.
+No latch inferred for signal `\processor_9_bits.\AddSub' from process `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:62$9'.
+No latch inferred for signal `\processor_9_bits.\Tcycle_D' from process `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:50$4'.
+No latch inferred for signal `\processor_9_bits.\I' from process `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:31$1'.
+
+3.2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod\reg_n\N=9.\Q' using process `$paramod\reg_n\N=9.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:174$21'.
+  created $dff cell `$procdff$175' with positive edge clock.
+Creating register for signal `\processor_9_bits.\Tcycle_Q' using process `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:41$2'.
+  created $dff cell `$procdff$176' with positive edge clock.
+
+3.2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `$paramod\reg_n\N=9.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:174$21'.
+Removing empty process `$paramod\reg_n\N=9.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:174$21'.
+Removing empty process `dec3to8.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:160$16'.
+Found and cleaned up 1 empty switch in `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:120$15'.
+Removing empty process `processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:120$15'.
+Removing empty process `processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:113$14'.
+Found and cleaned up 1 empty switch in `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:104$10'.
+Removing empty process `processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:104$10'.
+Found and cleaned up 4 empty switches in `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:62$9'.
+Removing empty process `processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:62$9'.
+Found and cleaned up 1 empty switch in `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:50$4'.
+Removing empty process `processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:50$4'.
+Found and cleaned up 1 empty switch in `\processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:41$2'.
+Removing empty process `processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:41$2'.
+Removing empty process `processor_9_bits.$proc$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:31$1'.
+Cleaned up 9 empty switches.
+
+3.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\reg_n\N=9.
+<suppressed ~1 debug messages>
+Optimizing module dec3to8.
+Optimizing module processor_9_bits.
+<suppressed ~18 debug messages>
+
+3.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\reg_n\N=9..
+Finding unused cells or wires in module \dec3to8..
+Finding unused cells or wires in module \processor_9_bits..
+Removed 105 unused cells and 160 unused wires.
+<suppressed ~126 debug messages>
+
+3.5. Executing CHECK pass (checking for obvious problems).
+checking module $paramod\reg_n\N=9..
+checking module dec3to8..
+checking module processor_9_bits..
+found and reported 0 problems.
+
+3.6. Executing OPT pass (performing simple optimizations).
+
+3.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\reg_n\N=9.
+Optimizing module dec3to8.
+Optimizing module processor_9_bits.
+
+3.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\reg_n\N=9'.
+Finding identical cells in module `\dec3to8'.
+Finding identical cells in module `\processor_9_bits'.
+<suppressed ~30 debug messages>
+Removed a total of 10 cells.
+
+3.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\reg_n\N=9..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \dec3to8..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \processor_9_bits..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$42.
+    dead port 2/2 on $mux $procmux$84.
+Removed 2 multiplexer ports.
+<suppressed ~5 debug messages>
+
+3.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\reg_n\N=9.
+  Optimizing cells in module \dec3to8.
+  Optimizing cells in module \processor_9_bits.
+    New ctrl vector for $pmux cell $procmux$157: { $procmux$125_CMP $auto$opt_reduce.cc:132:opt_mux$178 $procmux$123_CMP }
+    New ctrl vector for $pmux cell $procmux$39: $auto$opt_reduce.cc:132:opt_mux$180
+    New ctrl vector for $pmux cell $procmux$122: { $procmux$126_CMP $auto$opt_reduce.cc:132:opt_mux$182 }
+    New ctrl vector for $pmux cell $procmux$81: $auto$opt_reduce.cc:132:opt_mux$184
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$179: { $procmux$40_CMP $procmux$41_CMP }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$181: { $procmux$123_CMP $procmux$124_CMP $procmux$125_CMP }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$183: { $procmux$82_CMP $procmux$83_CMP }
+  Optimizing cells in module \processor_9_bits.
+Performed a total of 7 changes.
+
+3.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\reg_n\N=9'.
+Finding identical cells in module `\dec3to8'.
+Finding identical cells in module `\processor_9_bits'.
+Removed a total of 0 cells.
+
+3.6.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\reg_n\N=9..
+Finding unused cells or wires in module \dec3to8..
+Finding unused cells or wires in module \processor_9_bits..
+Removed 0 unused cells and 16 unused wires.
+<suppressed ~5 debug messages>
+
+3.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\reg_n\N=9.
+Optimizing module dec3to8.
+Optimizing module processor_9_bits.
+
+3.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\reg_n\N=9..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \dec3to8..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \processor_9_bits..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~5 debug messages>
+
+3.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\reg_n\N=9.
+  Optimizing cells in module \dec3to8.
+  Optimizing cells in module \processor_9_bits.
+Performed a total of 0 changes.
+
+3.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\reg_n\N=9'.
+Finding identical cells in module `\dec3to8'.
+Finding identical cells in module `\processor_9_bits'.
+Removed a total of 0 cells.
+
+3.6.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\reg_n\N=9..
+Finding unused cells or wires in module \dec3to8..
+Finding unused cells or wires in module \processor_9_bits..
+
+3.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\reg_n\N=9.
+Optimizing module dec3to8.
+Optimizing module processor_9_bits.
+
+3.6.16. Finished OPT passes. (There is nothing left to do.)
+
+3.7. Executing WREDUCE pass (reducing word size of cells).
+Removed top 30 bits (of 32) from port A of cell dec3to8.$shl$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:161$17 ($shl).
+Removed top 24 bits (of 32) from mux cell dec3to8.$ternary$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:161$18 ($mux).
+Removed top 24 bits (of 32) from port Y of cell dec3to8.$shl$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:161$17 ($shl).
+Removed top 24 bits (of 32) from wire dec3to8.$shl$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:161$17_Y.
+Removed top 1 bits (of 2) from mux cell processor_9_bits.$ternary$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:54$6 ($mux).
+Removed top 1 bits (of 3) from port B of cell processor_9_bits.$procmux$41_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell processor_9_bits.$procmux$40_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell processor_9_bits.$procmux$82_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell processor_9_bits.$procmux$125_CMP0 ($eq).
+Removed top 1 bits (of 2) from wire processor_9_bits.$ternary$/home/mounir/Desktop/proc_9/source/processor_9_bits.v:54$6_Y.
+
+3.8. Executing PEEPOPT pass (run peephole optimizers).
+
+3.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\reg_n\N=9..
+Finding unused cells or wires in module \dec3to8..
+Finding unused cells or wires in module \processor_9_bits..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~2 debug messages>
+
+3.10. Executing TECHMAP pass (map to technology primitives).
+
+3.10.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/cmp2lut.v
+Parsing Verilog input from `/usr/bin/../share/yosys/cmp2lut.v' to AST representation.
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+3.10.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~100 debug messages>
+
+3.11. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module $paramod\reg_n\N=9:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module dec3to8:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module processor_9_bits:
+  created 0 $alu and 0 $macc cells.
+
+3.12. Executing SHARE pass (SAT-based resource sharing).
+
+3.13. Executing OPT pass (performing simple optimizations).
+
+3.13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\reg_n\N=9.
+Optimizing module dec3to8.
+Optimizing module processor_9_bits.
+
+3.13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\reg_n\N=9'.
+Finding identical cells in module `\dec3to8'.
+Finding identical cells in module `\processor_9_bits'.
+Removed a total of 0 cells.
+
+3.13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\reg_n\N=9..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \dec3to8..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \processor_9_bits..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~5 debug messages>
+
+3.13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\reg_n\N=9.
+  Optimizing cells in module \dec3to8.
+  Optimizing cells in module \processor_9_bits.
+Performed a total of 0 changes.
+
+3.13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\reg_n\N=9'.
+Finding identical cells in module `\dec3to8'.
+Finding identical cells in module `\processor_9_bits'.
+Removed a total of 0 cells.
+
+3.13.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\reg_n\N=9..
+Finding unused cells or wires in module \dec3to8..
+Finding unused cells or wires in module \processor_9_bits..
+
+3.13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\reg_n\N=9.
+Optimizing module dec3to8.
+Optimizing module processor_9_bits.
+
+3.13.9. Finished OPT passes. (There is nothing left to do.)
+
+3.14. Executing FSM pass (extract and optimize FSM).
+
+3.14.1. Executing FSM_DETECT pass (finding FSMs in design).
+Found FSM state register processor_9_bits.Tcycle_Q.
+
+3.14.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\Tcycle_Q' from module `\processor_9_bits'.
+  found $dff cell for state register: $procdff$176
+  root of input selection tree: $0\Tcycle_Q[1:0]
+  found reset state: 2'00 (guessed from mux tree)
+  found ctrl input: \aResetn
+  found state code: 2'00
+  found ctrl input: $procmux$123_CMP
+  found ctrl input: $procmux$124_CMP
+  found ctrl input: $procmux$125_CMP
+  found ctrl input: $procmux$126_CMP
+  found state code: 2'11
+  found ctrl input: \Done
+  found state code: 2'10
+  found ctrl input: \Run
+  found state code: 2'01
+  found ctrl output: $procmux$123_CMP
+  found ctrl output: $procmux$124_CMP
+  found ctrl output: $procmux$125_CMP
+  found ctrl output: $procmux$126_CMP
+  ctrl inputs: { \Done \Run \aResetn }
+  ctrl outputs: { $procmux$125_CMP $procmux$124_CMP $procmux$123_CMP $procmux$126_CMP $0\Tcycle_Q[1:0] }
+  transition:       2'00 3'--0 ->       2'00 6'000100
+  transition:       2'00 3'-01 ->       2'00 6'000100
+  transition:       2'00 3'-11 ->       2'01 6'000101
+  transition:       2'10 3'--0 ->       2'00 6'010000
+  transition:       2'10 3'--1 ->       2'11 6'010011
+  transition:       2'01 3'--0 ->       2'00 6'100000
+  transition:       2'01 3'0-1 ->       2'10 6'100010
+  transition:       2'01 3'1-1 ->       2'00 6'100000
+  transition:       2'11 3'--0 ->       2'00 6'001000
+  transition:       2'11 3'--1 ->       2'00 6'001000
+
+3.14.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\Tcycle_Q$187' from module `\processor_9_bits'.
+  Merging pattern 3'--0 and 3'--1 from group (3 0 6'001000).
+  Merging pattern 3'--1 and 3'--0 from group (3 0 6'001000).
+
+3.14.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\reg_n\N=9..
+Finding unused cells or wires in module \dec3to8..
+Finding unused cells or wires in module \processor_9_bits..
+Removed 9 unused cells and 9 unused wires.
+<suppressed ~11 debug messages>
+
+3.14.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\Tcycle_Q$187' from module `\processor_9_bits'.
+  Removing unused output signal $0\Tcycle_Q[1:0] [0].
+  Removing unused output signal $0\Tcycle_Q[1:0] [1].
+
+3.14.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\Tcycle_Q$187' from module `\processor_9_bits' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  00 -> ---1
+  10 -> --1-
+  01 -> -1--
+  11 -> 1---
+
+3.14.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\Tcycle_Q$187' from module `\processor_9_bits':
+-------------------------------------
+
+  Information on FSM $fsm$\Tcycle_Q$187 (\Tcycle_Q):
+
+  Number of input signals:    3
+  Number of output signals:   4
+  Number of state bits:       4
+
+  Input signals:
+    0: \aResetn
+    1: \Run
+    2: \Done
+
+  Output signals:
+    0: $procmux$126_CMP
+    1: $procmux$123_CMP
+    2: $procmux$124_CMP
+    3: $procmux$125_CMP
+
+  State encoding:
+    0:     4'---1  <RESET STATE>
+    1:     4'--1-
+    2:     4'-1--
+    3:     4'1---
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 3'--0   ->     0 4'0001
+      1:     0 3'-01   ->     0 4'0001
+      2:     0 3'-11   ->     2 4'0001
+      3:     1 3'--0   ->     0 4'0100
+      4:     1 3'--1   ->     3 4'0100
+      5:     2 3'--0   ->     0 4'1000
+      6:     2 3'1-1   ->     0 4'1000
+      7:     2 3'0-1   ->     1 4'1000
+      8:     3 3'---   ->     0 4'0010
+
+-------------------------------------
+
+3.14.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\Tcycle_Q$187' from module `\processor_9_bits'.
+
+3.15. Executing OPT pass (performing simple optimizations).
+
+3.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\reg_n\N=9.
+Optimizing module dec3to8.
+Optimizing module processor_9_bits.
+<suppressed ~2 debug messages>
+
+3.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\reg_n\N=9'.
+Finding identical cells in module `\dec3to8'.
+Finding identical cells in module `\processor_9_bits'.
+Removed a total of 0 cells.
+
+3.15.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.15.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\reg_n\N=9..
+Finding unused cells or wires in module \dec3to8..
+Finding unused cells or wires in module \processor_9_bits..
+Removed 0 unused cells and 8 unused wires.
+<suppressed ~1 debug messages>
+
+3.15.5. Finished fast OPT passes.
+
+3.16. Executing MEMORY pass.
+
+3.16.1. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+
+3.16.2. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\reg_n\N=9..
+Finding unused cells or wires in module \dec3to8..
+Finding unused cells or wires in module \processor_9_bits..
+
+3.16.3. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+3.16.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\reg_n\N=9..
+Finding unused cells or wires in module \dec3to8..
+Finding unused cells or wires in module \processor_9_bits..
+
+3.16.5. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+3.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\reg_n\N=9..
+Finding unused cells or wires in module \dec3to8..
+Finding unused cells or wires in module \processor_9_bits..
+
+3.18. Executing OPT pass (performing simple optimizations).
+
+3.18.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\reg_n\N=9.
+Optimizing module dec3to8.
+Optimizing module processor_9_bits.
+<suppressed ~5 debug messages>
+
+3.18.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\reg_n\N=9'.
+Finding identical cells in module `\dec3to8'.
+Finding identical cells in module `\processor_9_bits'.
+Removed a total of 0 cells.
+
+3.18.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.18.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\reg_n\N=9..
+Finding unused cells or wires in module \dec3to8..
+Finding unused cells or wires in module \processor_9_bits..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+3.18.5. Finished fast OPT passes.
+
+3.19. Executing MEMORY_MAP pass (converting $mem cells to logic and flip-flops).
+
+3.20. Executing OPT pass (performing simple optimizations).
+
+3.20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\reg_n\N=9.
+Optimizing module dec3to8.
+Optimizing module processor_9_bits.
+
+3.20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\reg_n\N=9'.
+Finding identical cells in module `\dec3to8'.
+Finding identical cells in module `\processor_9_bits'.
+Removed a total of 0 cells.
+
+3.20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\reg_n\N=9..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \dec3to8..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \processor_9_bits..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~3 debug messages>
+
+3.20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\reg_n\N=9.
+  Optimizing cells in module \dec3to8.
+  Optimizing cells in module \processor_9_bits.
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$181: { \Tcycle_Q [1] \Tcycle_Q [2] \Tcycle_Q [3] }
+    New input vector for $reduce_or cell $auto$fsm_map.cc:144:implement_pattern_cache$207: { $auto$fsm_map.cc:118:implement_pattern_cache$201 \Tcycle_Q [3] $auto$fsm_map.cc:74:implement_pattern_cache$197 $auto$fsm_map.cc:118:implement_pattern_cache$205 }
+  Optimizing cells in module \processor_9_bits.
+Performed a total of 2 changes.
+
+3.20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\reg_n\N=9'.
+Finding identical cells in module `\dec3to8'.
+Finding identical cells in module `\processor_9_bits'.
+Removed a total of 0 cells.
+
+3.20.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.20.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\reg_n\N=9..
+Finding unused cells or wires in module \dec3to8..
+Finding unused cells or wires in module \processor_9_bits..
+
+3.20.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\reg_n\N=9.
+Optimizing module dec3to8.
+Optimizing module processor_9_bits.
+
+3.20.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.20.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\reg_n\N=9..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \dec3to8..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \processor_9_bits..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~3 debug messages>
+
+3.20.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\reg_n\N=9.
+  Optimizing cells in module \dec3to8.
+  Optimizing cells in module \processor_9_bits.
+Performed a total of 0 changes.
+
+3.20.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\reg_n\N=9'.
+Finding identical cells in module `\dec3to8'.
+Finding identical cells in module `\processor_9_bits'.
+Removed a total of 0 cells.
+
+3.20.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.20.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\reg_n\N=9..
+Finding unused cells or wires in module \dec3to8..
+Finding unused cells or wires in module \processor_9_bits..
+
+3.20.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\reg_n\N=9.
+Optimizing module dec3to8.
+Optimizing module processor_9_bits.
+
+3.20.16. Finished OPT passes. (There is nothing left to do.)
+
+3.21. Executing TECHMAP pass (map to technology primitives).
+
+3.21.1. Executing Verilog-2005 frontend: <techmap.v>
+Parsing Verilog input from `<techmap.v>' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+3.21.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $dff.
+Using template $paramod\_90_pmux\WIDTH=1\S_WIDTH=2 for cells of type $pmux.
+Using extmapper simplemap for cells of type $mux.
+Using template $paramod$constmap:5c4fb84a0fc6ae5c0d4120d25a7a267fccccc7a8$paramod$50364fcb1dee21b888dae68ce9eb4c64c5c3c2ee\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+No more expansions possible.
+<suppressed ~217 debug messages>
+
+3.22. Executing OPT pass (performing simple optimizations).
+
+3.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\reg_n\N=9.
+Optimizing module dec3to8.
+Optimizing module processor_9_bits.
+<suppressed ~9 debug messages>
+
+3.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\reg_n\N=9'.
+Finding identical cells in module `\dec3to8'.
+Finding identical cells in module `\processor_9_bits'.
+<suppressed ~15 debug messages>
+Removed a total of 5 cells.
+
+3.22.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\reg_n\N=9..
+Finding unused cells or wires in module \dec3to8..
+Finding unused cells or wires in module \processor_9_bits..
+Removed 0 unused cells and 31 unused wires.
+<suppressed ~2 debug messages>
+
+3.22.5. Finished fast OPT passes.
+
+3.23. Executing ABC pass (technology mapping using ABC).
+
+3.23.1. Extracting gate netlist of module `$paramod\reg_n\N=9' to `<abc-temp-dir>/input.blif'..
+Extracted 9 gates and 28 wires to a netlist network with 19 inputs and 9 outputs.
+
+3.23.1.1. Executing ABC.
+Running ABC command: berkeley-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 17 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + retime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.23.1.2. Re-integrating ABC results.
+ABC RESULTS:               MUX cells:        9
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:       19
+ABC RESULTS:          output signals:        9
+Removing temp directory.
+
+3.23.2. Extracting gate netlist of module `\dec3to8' to `<abc-temp-dir>/input.blif'..
+Extracted 21 gates and 26 wires to a netlist network with 4 inputs and 8 outputs.
+
+3.23.2.1. Executing ABC.
+Running ABC command: berkeley-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 17 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + retime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.23.2.2. Re-integrating ABC results.
+ABC RESULTS:            ANDNOT cells:        8
+ABC RESULTS:              NAND cells:        1
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:                OR cells:        9
+ABC RESULTS:             ORNOT cells:        2
+ABC RESULTS:        internal signals:       14
+ABC RESULTS:           input signals:        4
+ABC RESULTS:          output signals:        8
+Removing temp directory.
+
+3.23.3. Extracting gate netlist of module `\processor_9_bits' to `<abc-temp-dir>/input.blif'..
+Extracted 43 gates and 53 wires to a netlist network with 9 inputs and 6 outputs.
+
+3.23.3.1. Executing ABC.
+Running ABC command: berkeley-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 17 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + retime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.23.3.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:            ANDNOT cells:        7
+ABC RESULTS:              AOI3 cells:        3
+ABC RESULTS:               MUX cells:        1
+ABC RESULTS:              NAND cells:        2
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:               NOT cells:        3
+ABC RESULTS:              OAI3 cells:        1
+ABC RESULTS:                OR cells:        3
+ABC RESULTS:             ORNOT cells:        1
+ABC RESULTS:        internal signals:       38
+ABC RESULTS:           input signals:        9
+ABC RESULTS:          output signals:        6
+Removing temp directory.
+
+3.24. Executing OPT pass (performing simple optimizations).
+
+3.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\reg_n\N=9.
+Optimizing module dec3to8.
+Optimizing module processor_9_bits.
+
+3.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\reg_n\N=9'.
+Finding identical cells in module `\dec3to8'.
+Finding identical cells in module `\processor_9_bits'.
+Removed a total of 0 cells.
+
+3.24.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\reg_n\N=9..
+Finding unused cells or wires in module \dec3to8..
+Finding unused cells or wires in module \processor_9_bits..
+Removed 0 unused cells and 94 unused wires.
+<suppressed ~3 debug messages>
+
+3.24.5. Finished fast OPT passes.
+
+3.25. Executing HIERARCHY pass (managing design hierarchy).
+
+3.25.1. Analyzing design hierarchy..
+Top module:  \processor_9_bits
+Used module:     $paramod\reg_n\N=9
+
+3.25.2. Analyzing design hierarchy..
+Top module:  \processor_9_bits
+Used module:     $paramod\reg_n\N=9
+Removing unused module `\dec3to8'.
+Removed 1 unused modules.
+
+3.26. Printing statistics.
+
+=== $paramod\reg_n\N=9 ===
+
+   Number of wires:                  5
+   Number of wire bits:             29
+   Number of public wires:           4
+   Number of public wire bits:      20
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 18
+     $_DFF_P_                        9
+     $_MUX_                          9
+
+=== processor_9_bits ===
+
+   Number of wires:                 31
+   Number of wire bits:             44
+   Number of public wires:           9
+   Number of public wire bits:      22
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 29
+     $_ANDNOT_                       7
+     $_AND_                          2
+     $_AOI3_                         3
+     $_DFF_P_                        4
+     $_MUX_                          1
+     $_NAND_                         2
+     $_NOR_                          1
+     $_NOT_                          3
+     $_OAI3_                         1
+     $_ORNOT_                        1
+     $_OR_                           3
+     $paramod\reg_n\N=9              1
+
+=== design hierarchy ===
+
+   processor_9_bits                  1
+     $paramod\reg_n\N=9              1
+
+   Number of wires:                 36
+   Number of wire bits:             73
+   Number of public wires:          13
+   Number of public wire bits:      42
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 46
+     $_ANDNOT_                       7
+     $_AND_                          2
+     $_AOI3_                         3
+     $_DFF_P_                       13
+     $_MUX_                         10
+     $_NAND_                         2
+     $_NOR_                          1
+     $_NOT_                          3
+     $_OAI3_                         1
+     $_ORNOT_                        1
+     $_OR_                           3
+
+3.27. Executing CHECK pass (checking for obvious problems).
+checking module $paramod\reg_n\N=9..
+checking module processor_9_bits..
+found and reported 0 problems.
+
+4. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell DFFNEGX1 (noninv, pins=3, area=864.00) is a direct match for cell type $_DFF_N_.
+  cell DFFPOSX1 (noninv, pins=3, area=864.00) is a direct match for cell type $_DFF_P_.
+  cell DFFSR (noninv, pins=5, area=1584.00) is a direct match for cell type $_DFFSR_PNN_.
+  create mapping for $_DFFSR_PPN_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFFSR_PNP_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFFSR_PPP_ from mapping for $_DFFSR_PNP_.
+  create mapping for $_DFFSR_NNN_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFFSR_NPN_ from mapping for $_DFFSR_NNN_.
+  create mapping for $_DFFSR_NNP_ from mapping for $_DFFSR_NNN_.
+  create mapping for $_DFFSR_NPP_ from mapping for $_DFFSR_NNP_.
+  create mapping for $_DFF_NN0_ from mapping for $_DFFSR_NNN_.
+  create mapping for $_DFF_NN1_ from mapping for $_DFFSR_NNN_.
+  create mapping for $_DFF_NP0_ from mapping for $_DFFSR_NPP_.
+  create mapping for $_DFF_NP1_ from mapping for $_DFFSR_NPP_.
+  create mapping for $_DFF_PN0_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFF_PN1_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFF_PP0_ from mapping for $_DFFSR_PPP_.
+  create mapping for $_DFF_PP1_ from mapping for $_DFFSR_PPP_.
+  final dff cell mappings:
+    DFFNEGX1 _DFF_N_ (.CLK( C), .D( D), .Q( Q));
+    DFFPOSX1 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    DFFSR _DFF_NN0_ (.CLK(~C), .D( D), .Q( Q), .R( R), .S( 1));
+    DFFSR _DFF_NN1_ (.CLK(~C), .D( D), .Q( Q), .R( 1), .S( R));
+    DFFSR _DFF_NP0_ (.CLK(~C), .D( D), .Q( Q), .R(~R), .S( 1));
+    DFFSR _DFF_NP1_ (.CLK(~C), .D( D), .Q( Q), .R( 1), .S(~R));
+    DFFSR _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .R( R), .S( 1));
+    DFFSR _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .R( 1), .S( R));
+    DFFSR _DFF_PP0_ (.CLK( C), .D( D), .Q( Q), .R(~R), .S( 1));
+    DFFSR _DFF_PP1_ (.CLK( C), .D( D), .Q( Q), .R( 1), .S(~R));
+    DFFSR _DFFSR_NNN_ (.CLK(~C), .D( D), .Q( Q), .R( R), .S( S));
+    DFFSR _DFFSR_NNP_ (.CLK(~C), .D( D), .Q( Q), .R(~R), .S( S));
+    DFFSR _DFFSR_NPN_ (.CLK(~C), .D( D), .Q( Q), .R( R), .S(~S));
+    DFFSR _DFFSR_NPP_ (.CLK(~C), .D( D), .Q( Q), .R(~R), .S(~S));
+    DFFSR _DFFSR_PNN_ (.CLK( C), .D( D), .Q( Q), .R( R), .S( S));
+    DFFSR _DFFSR_PNP_ (.CLK( C), .D( D), .Q( Q), .R(~R), .S( S));
+    DFFSR _DFFSR_PPN_ (.CLK( C), .D( D), .Q( Q), .R( R), .S(~S));
+    DFFSR _DFFSR_PPP_ (.CLK( C), .D( D), .Q( Q), .R(~R), .S(~S));
+Mapping DFF cells in module `$paramod\reg_n\N=9':
+  mapped 9 $_DFF_P_ cells to \DFFPOSX1 cells.
+Mapping DFF cells in module `\processor_9_bits':
+  mapped 4 $_DFF_P_ cells to \DFFPOSX1 cells.
+
+5. Executing OPT pass (performing simple optimizations).
+
+5.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\reg_n\N=9.
+Optimizing module processor_9_bits.
+
+5.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\reg_n\N=9'.
+Finding identical cells in module `\processor_9_bits'.
+Removed a total of 0 cells.
+
+5.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\reg_n\N=9..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \processor_9_bits..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+5.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\reg_n\N=9.
+  Optimizing cells in module \processor_9_bits.
+Performed a total of 0 changes.
+
+5.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\reg_n\N=9'.
+Finding identical cells in module `\processor_9_bits'.
+Removed a total of 0 cells.
+
+5.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+5.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\reg_n\N=9..
+Finding unused cells or wires in module \processor_9_bits..
+
+5.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\reg_n\N=9.
+Optimizing module processor_9_bits.
+
+5.9. Finished OPT passes. (There is nothing left to do.)
+
+6. Executing ABC pass (technology mapping using ABC).
+
+6.1. Extracting gate netlist of module `$paramod\reg_n\N=9' to `<abc-temp-dir>/input.blif'..
+Extracted 9 gates and 28 wires to a netlist network with 19 inputs and 9 outputs.
+
+6.1.1. Executing ABC.
+Running ABC command: /usr/local/share/qflow/bin/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /usr/local/share/qflow/tech/osu050/osu05_stdcells.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFNEGX1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFPOSX1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFSR".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "LATCH".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "PADINOUT".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUFX1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUFX2".
+ABC: Scl_LibertyReadGenlib() skipped cell "PADFC" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "PADNC" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "PADVDD" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "PADGND" without logic function.
+ABC: Library "osu05_stdcells" from "/usr/local/share/qflow/tech/osu050/osu05_stdcells.lib" has 28 cells (11 skipped: 4 seq; 3 tri-state; 4 no func; 0 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.38 MB. Time =     0.00 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "FAX1").
+ABC: + strash 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + ifraig 
+ABC: + retime 
+ABC: + strash 
+ABC: + dch -f 
+ABC: + map -M 1 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+6.1.2. Re-integrating ABC results.
+ABC RESULTS:             INVX1 cells:        9
+ABC RESULTS:           NAND2X1 cells:        9
+ABC RESULTS:           OAI21X1 cells:        9
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:       19
+ABC RESULTS:          output signals:        9
+Removing temp directory.
+
+6.2. Extracting gate netlist of module `\processor_9_bits' to `<abc-temp-dir>/input.blif'..
+Extracted 24 gates and 33 wires to a netlist network with 9 inputs and 6 outputs.
+
+6.2.1. Executing ABC.
+Running ABC command: /usr/local/share/qflow/bin/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /usr/local/share/qflow/tech/osu050/osu05_stdcells.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFNEGX1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFPOSX1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFSR".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "LATCH".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "PADINOUT".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUFX1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUFX2".
+ABC: Scl_LibertyReadGenlib() skipped cell "PADFC" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "PADNC" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "PADVDD" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "PADGND" without logic function.
+ABC: Library "osu05_stdcells" from "/usr/local/share/qflow/tech/osu050/osu05_stdcells.lib" has 28 cells (11 skipped: 4 seq; 3 tri-state; 4 no func; 0 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.38 MB. Time =     0.00 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "FAX1").
+ABC: + strash 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + ifraig 
+ABC: + retime 
+ABC: + strash 
+ABC: + dch -f 
+ABC: + map -M 1 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+6.2.2. Re-integrating ABC results.
+ABC RESULTS:            AND2X2 cells:        1
+ABC RESULTS:           AOI21X1 cells:        3
+ABC RESULTS:             INVX1 cells:        6
+ABC RESULTS:           NAND2X1 cells:        2
+ABC RESULTS:           NAND3X1 cells:        1
+ABC RESULTS:            NOR2X1 cells:        1
+ABC RESULTS:            NOR3X1 cells:        1
+ABC RESULTS:           OAI21X1 cells:        3
+ABC RESULTS:             OR2X2 cells:        1
+ABC RESULTS:        internal signals:       18
+ABC RESULTS:           input signals:        9
+ABC RESULTS:          output signals:        6
+Removing temp directory.
+
+7. Executing FLATTEN pass (flatten design).
+Using template $paramod\reg_n\N=9 for cells of type $paramod\reg_n\N=9.
+<suppressed ~1 debug messages>
+No more expansions possible.
+Deleting now unused module $paramod\reg_n\N=9.
+
+8. Executing SETUNDEF pass (replace undef values with defined constants).
+Removed 28 unused cells and 80 unused wires.
+
+9. Executing IOPADMAP pass (mapping inputs/outputs to IO-PAD cells).
+Don't map input port processor_9_bits.DataIn: Missing option -inpad.
+Mapping port processor_9_bits.Done using BUFX2.
+Don't map input port processor_9_bits.Run: Missing option -inpad.
+Don't map input port processor_9_bits.aResetn: Missing option -inpad.
+Don't map input port processor_9_bits.clock: Missing option -inpad.
+
+10. Executing OPT pass (performing simple optimizations).
+
+10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module processor_9_bits.
+
+10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\processor_9_bits'.
+Removed a total of 0 cells.
+
+10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \processor_9_bits..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \processor_9_bits.
+Performed a total of 0 changes.
+
+10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\processor_9_bits'.
+Removed a total of 0 cells.
+
+10.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \processor_9_bits..
+
+10.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module processor_9_bits.
+
+10.9. Finished OPT passes. (There is nothing left to do.)
+
+11. Executing Verilog backend.
+Dumping module `\processor_9_bits'.
+
+12. Printing statistics.
+
+=== processor_9_bits ===
+
+   Number of wires:                 31
+   Number of wire bits:             44
+   Number of public wires:          31
+   Number of public wire bits:      44
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 32
+     AND2X2                          1
+     AOI21X1                         3
+     BUFX2                           1
+     DFFPOSX1                        6
+     INVX1                           8
+     NAND2X1                         4
+     NAND3X1                         1
+     NOR2X1                          1
+     NOR3X1                          1
+     OAI21X1                         5
+     OR2X2                           1
+
+Warnings: 3 unique messages, 3 total
+End of script. Logfile hash: 03f0448b74
+CPU: user 0.15s system 0.00s, MEM: 17.45 MB total, 11.99 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 15% 18x opt_expr (0 sec), 15% 1x share (0 sec), ...
+Running getpowerground to determine power and ground net names.
+getpowerground.tcl  /usr/local/share/qflow/tech/osu050/osu050_stdcells.lef
+Running vlogFanout
+vlogFanout -l 300 -c 75 -I processor_9_bits_nofanout -s nullstring -p /usr/local/share/qflow/tech/osu050/osu05_stdcells.lib -b BUFX2,CLKBUF1 -i A,A -o Y,Y processor_9_bits_mapped.v processor_9_bits_sized.v
+
+vlogFanout for qflow 1.4.104
+Parsing library "osu05_stdcells"
+End of library at line 6606
+Lib Read:  Processed 6607 lines.
+Top internal fanout is 4 (load 489.479) from node I[1],
+driven by DFFPOSX1 with strength 549.757 (fF driven at latency 300)
+Top fanout load-to-strength ratio is 0.902168 (latency = 270.65 ps)
+Top input node fanout is 6 (load 299.574) from node clock.
+0 gates exceed specified minimum load.
+0 buffers were added.
+0 gates were changed.
+
+Gate counts by drive strength:
+
+	"1" gates	In: 29    	Out: 29    	+0
+	"2" gates	In: 3    	Out: 3    	+0
+
+Number of gates changed: 0
+Running vlog2Verilog for antenna cell mapping.
+vlog2Verilog -c -p -v vdd -g gnd  -l /usr/local/share/qflow/tech/osu050/osu050_stdcells.lef 
+   -o processor_9_bits.v processor_9_bits_sized.v
+
+Generating RTL verilog and SPICE netlist file in directory
+	 /home/mounir/Desktop/proc_9/synthesis
+Files:
+   Verilog: /home/mounir/Desktop/proc_9/synthesis/processor_9_bits.rtl.v
+   Verilog: /home/mounir/Desktop/proc_9/synthesis/processor_9_bits.rtlnopwr.v
+   Verilog: /home/mounir/Desktop/proc_9/synthesis/processor_9_bits.rtlbb.v
+   Spice:   /home/mounir/Desktop/proc_9/synthesis/processor_9_bits.spc
+
+Running vlog2Verilog.
+vlog2Verilog -c -v vdd -g gnd  -l /usr/local/share/qflow/tech/osu050/osu050_stdcells.lef 
+	-o processor_9_bits.rtl.v
+   processor_9_bits.v
+vlog2Verilog -c -p -v vdd -g gnd  -l /usr/local/share/qflow/tech/osu050/osu050_stdcells.lef 
+	-o processor_9_bits.rtlnopwr.v
+   processor_9_bits.v
+/usr/local/share/qflow/bin/vlog2Verilog -c -p -b -n -v vdd -g gnd  -l /usr/local/share/qflow/tech/osu050/osu050_stdcells.lef
+   -o processor_9_bits.rtlbb.v
+Running vlog2Spice.
+vlog2Spice -i -l  /usr/local/share/qflow/tech/osu050/osu050_stdcells.sp -o processor_9_bits.spc processor_9_bits.rtl.v
+Running spi2xspice.py
+spi2xspice.py "/usr/local/share/qflow/tech/osu050/osu05_stdcells.lib" processor_9_bits.spc processor_9_bits.xspice
+
+Synthesis script ended on 01 يناير, 2025 +01 18:05:30

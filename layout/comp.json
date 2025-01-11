@@ -1,0 +1,253 @@
+[
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "Q",
+        "CLK",
+        "D",
+        "gnd",
+        "vdd"
+      ], [
+        "Q",
+        "CLK",
+        "D",
+        "gnd",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "processor_9_bits",
+      "processor_9_bits"
+   ],
+   "devices": [
+       [
+         ["OAI21X1", 5],
+         ["NAND2X1", 4],
+         ["INVX1", 8],
+         ["DFFPOSX1", 6],
+         ["AOI21X1", 3],
+         ["BUFX2", 1],
+         ["AND2X2", 1],
+         ["NOR3X1", 1],
+         ["NAND3X1", 1],
+         ["NOR2X1", 1],
+         ["OR2X2", 1 ]
+       ], [
+         ["OAI21X1", 5 ],
+         ["NAND2X1", 4 ],
+         ["INVX1", 8 ],
+         ["DFFPOSX1", 6 ],
+         ["AOI21X1", 3 ],
+         ["BUFX2", 1 ],
+         ["AND2X2", 1 ],
+         ["NOR3X1", 1 ],
+         ["NAND3X1", 1 ],
+         ["NOR2X1", 1 ],
+         ["OR2X2", 1 ]
+       ]
+   ],
+   "nets": [
+    37,
+    37
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "Done",
+        "clock",
+        "aResetn",
+        "vdd",
+        "gnd",
+        "Run",
+        "DataIn"
+      ], [
+        "Done",
+        "clock",
+        "aResetn",
+        "vdd",
+        "gnd",
+        "Run",
+        "DataIn"
+      ]
+   ]
+  }
+]

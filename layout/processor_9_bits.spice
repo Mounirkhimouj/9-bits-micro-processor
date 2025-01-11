@@ -1,0 +1,86 @@
+* NGSPICE file created from processor_9_bits.ext - technology: scmos
+
+* Black-box entry subcircuit for OAI21X1 abstract view
+.subckt OAI21X1 A B C gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for NAND2X1 abstract view
+.subckt NAND2X1 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for INVX1 abstract view
+.subckt INVX1 A gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for DFFPOSX1 abstract view
+.subckt DFFPOSX1 Q CLK D gnd vdd
+.ends
+
+* Black-box entry subcircuit for AOI21X1 abstract view
+.subckt AOI21X1 A B C gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for BUFX2 abstract view
+.subckt BUFX2 A gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for AND2X2 abstract view
+.subckt AND2X2 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for NOR3X1 abstract view
+.subckt NOR3X1 A B C gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for NAND3X1 abstract view
+.subckt NAND3X1 A B C gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for FILL abstract view
+.subckt FILL gnd vdd
+.ends
+
+* Black-box entry subcircuit for NOR2X1 abstract view
+.subckt NOR2X1 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for OR2X2 abstract view
+.subckt OR2X2 A B gnd Y vdd
+.ends
+
+.subckt processor_9_bits gnd vdd DataIn Done Run aResetn clock
+X_49_ _52_/A _49_/B _49_/C gnd _53_/D vdd OAI21X1
+X_48_ _52_/A gnd gnd _49_/C vdd NAND2X1
+X_47_ _53_/Q gnd _49_/B vdd INVX1
+X_29_ Run gnd _31_/B vdd INVX1
+X_46_ _46_/Q clock _46_/D gnd vdd DFFPOSX1
+X_28_ _45_/Q gnd _32_/A vdd INVX1
+X_45_ _45_/Q clock _45_/D gnd vdd DFFPOSX1
+X_44_ _44_/Q clock _44_/D gnd vdd DFFPOSX1
+X_43_ _43_/Q clock _43_/D gnd vdd DFFPOSX1
+X_26_ _53_/Q _26_/B _38_/B gnd _32_/B vdd OAI21X1
+X_27_ _32_/B gnd _42_/A vdd INVX1
+X_25_ _30_/B _53_/Q _54_/Q gnd _38_/B vdd AOI21X1
+X_42_ _42_/A gnd Done vdd BUFX2
+X_24_ _46_/Q gnd _30_/B vdd INVX1
+X_41_ _44_/Q aResetn gnd _46_/D vdd AND2X2
+X_40_ _40_/A gnd _45_/D vdd INVX1
+X_23_ _46_/Q _43_/Q _44_/Q gnd _26_/B vdd NOR3X1
+X_39_ _43_/Q aResetn Run gnd _40_/A vdd NAND3X1
+X_38_ _38_/A _38_/B _38_/C gnd _44_/D vdd AOI21X1
+XFILL12600x6150 gnd vdd FILL
+X_54_ _54_/Q clock _54_/D gnd vdd DFFPOSX1
+X_37_ aResetn _45_/Q gnd _38_/C vdd NAND2X1
+X_53_ _53_/Q clock _53_/D gnd vdd DFFPOSX1
+X_36_ _43_/Q _36_/B _36_/C gnd _38_/A vdd OAI21X1
+X_35_ _53_/Q gnd _36_/C vdd INVX1
+X_52_ _52_/A _52_/B _52_/C gnd _54_/D vdd OAI21X1
+X_51_ _52_/A gnd gnd _52_/C vdd NAND2X1
+X_34_ _45_/Q _36_/B gnd _52_/A vdd NOR2X1
+X_50_ _54_/Q gnd _52_/B vdd INVX1
+X_33_ _46_/Q _44_/Q gnd _36_/B vdd OR2X2
+X_32_ _32_/A _32_/B _32_/C gnd _43_/D vdd OAI21X1
+X_31_ _43_/Q _31_/B _31_/C gnd _32_/C vdd AOI21X1
+X_30_ aResetn _30_/B gnd _31_/C vdd NAND2X1
+.ends
+

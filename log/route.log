@@ -1,0 +1,278 @@
+Qflow route logfile created on 01 يناير, 2025 +01 18:05:32
+qrouter -noc  -s processor_9_bits.cfg
+Qrouter detail maze router version 1.4.88.T
+Reading LEF data from file /usr/local/share/qflow/tech/osu050/osu050_stdcells.lef.
+LEF Read, Line 115: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 116: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 120: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 121: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 131: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 132: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 136: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 137: NOTE:  Old format VIARULE ignored.
+LEF file:  Defines site corner (ignored)
+LEF file:  Defines site IO (ignored)
+LEF file:  Defines site core (ignored)
+LEF read: Processed 3221 lines.
+LEF Read: encountered 0 errors and 8 warnings total.
+Reading DEF data from file processor_9_bits.def.
+Diagnostic: Design name: "processor_9_bits"
+  Processed 0 vias total.
+  Processed 33 subcell instances total.
+  Processed 7 pins total.
+  Processed 37 nets total (0 fixed).
+  Processed 2 special nets total (3 fixed).
+DEF read: Processed 229 lines.
+Output scale = microns / 100, precision 1
+There are 38 nets in this design.
+*** Running stage1 routing with defaults
+Finished routing net clock
+Nets remaining: 37
+Finished routing net Tcycle_Q[0]
+Nets remaining: 36
+Finished routing net I[1]
+Nets remaining: 35
+Finished routing net aResetn
+Nets remaining: 34
+Finished routing net IRin
+Nets remaining: 33
+Finished routing net Tcycle_Q[3]
+Nets remaining: 32
+Finished routing net Tcycle_Q[1]
+Nets remaining: 31
+Finished routing net Tcycle_Q[2]
+Nets remaining: 30
+Finished routing net _5_
+Nets remaining: 29
+Finished routing net I[2]
+Nets remaining: 28
+Finished routing net _6_
+Nets remaining: 27
+Finished routing net _7_
+Nets remaining: 26
+Finished routing net Run
+Nets remaining: 25
+Finished routing net _12_
+Nets remaining: 24
+Finished routing net _4_
+Nets remaining: 23
+Finished routing net _17_
+Nets remaining: 22
+Finished routing net _8_
+Nets remaining: 21
+Finished routing net _9_
+Nets remaining: 20
+Finished routing net _10_
+Nets remaining: 19
+Finished routing net _11_
+Nets remaining: 18
+Finished routing net _3_
+Nets remaining: 17
+Finished routing net _13_
+Nets remaining: 16
+Failed to route net _14_
+Finished routing net _15_
+Nets remaining: 15
+Finished routing net _0_
+Nets remaining: 14
+Finished routing net _16_
+Nets remaining: 13
+Finished routing net _1_
+Nets remaining: 12
+Finished routing net _2_
+Nets remaining: 11
+Finished routing net Done
+Nets remaining: 10
+Finished routing net _19_
+Nets remaining: 9
+Finished routing net gnd
+Nets remaining: 8
+Finished routing net _20_
+Nets remaining: 7
+Finished routing net _18_[1]
+Nets remaining: 6
+Finished routing net _21_
+Nets remaining: 5
+Finished routing net _22_
+Nets remaining: 4
+Finished routing net _18_[2]
+Nets remaining: 3
+
+----------------------------------------------
+Progress: Stage 1 total routes completed: 65
+Failed net routes: 1
+----------------------------------------------
+*** Running stage2 routing with options mask 10, effort 10
+Nets remaining: 1
+Best route of _14_ collides with net: _7_ 
+Ripping up blocking net _7_
+Nets remaining: 1
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 68
+No failed routes!
+----------------------------------------------
+*** Running stage3 routing with defaults, 1st round
+Finished routing net clock
+Nets remaining: 37
+Finished routing net Tcycle_Q[0]
+Nets remaining: 36
+Finished routing net I[1]
+Nets remaining: 35
+Finished routing net aResetn
+Nets remaining: 34
+Finished routing net IRin
+Nets remaining: 33
+Finished routing net Tcycle_Q[3]
+Nets remaining: 32
+Finished routing net Tcycle_Q[1]
+Nets remaining: 31
+Finished routing net Tcycle_Q[2]
+Nets remaining: 30
+Finished routing net _5_
+Nets remaining: 29
+Finished routing net I[2]
+Nets remaining: 28
+Finished routing net _6_
+Nets remaining: 27
+Finished routing net _7_
+Nets remaining: 26
+Finished routing net Run
+Nets remaining: 25
+Finished routing net _12_
+Nets remaining: 24
+Keeping route for net _4_
+Finished routing net _17_
+Nets remaining: 22
+Finished routing net _8_
+Nets remaining: 21
+Keeping route for net _9_
+Finished routing net _10_
+Nets remaining: 19
+Finished routing net _11_
+Nets remaining: 18
+Finished routing net _3_
+Nets remaining: 17
+Keeping route for net _13_
+Finished routing net _14_
+Nets remaining: 15
+Finished routing net _15_
+Nets remaining: 14
+Finished routing net _0_
+Nets remaining: 13
+Finished routing net _16_
+Nets remaining: 12
+Finished routing net _1_
+Nets remaining: 11
+Finished routing net _2_
+Nets remaining: 10
+Keeping route for net Done
+Keeping route for net _19_
+Finished routing net gnd
+Nets remaining: 7
+Finished routing net _20_
+Nets remaining: 6
+Finished routing net _18_[1]
+Nets remaining: 5
+Finished routing net _21_
+Nets remaining: 4
+Finished routing net _22_
+Nets remaining: 3
+Finished routing net _18_[2]
+Nets remaining: 2
+
+----------------------------------------------
+Progress: Stage 3 total routes completed: 129
+No failed routes!
+----------------------------------------------
+*** Running stage3 routing with defaults, 2nd round
+Finished routing net clock
+Nets remaining: 37
+Finished routing net Tcycle_Q[0]
+Nets remaining: 36
+Finished routing net I[1]
+Nets remaining: 35
+Finished routing net aResetn
+Nets remaining: 34
+Finished routing net IRin
+Nets remaining: 33
+Finished routing net Tcycle_Q[3]
+Nets remaining: 32
+Finished routing net Tcycle_Q[1]
+Nets remaining: 31
+Finished routing net Tcycle_Q[2]
+Nets remaining: 30
+Finished routing net _5_
+Nets remaining: 29
+Finished routing net I[2]
+Nets remaining: 28
+Finished routing net _6_
+Nets remaining: 27
+Finished routing net _7_
+Nets remaining: 26
+Finished routing net Run
+Nets remaining: 25
+Finished routing net _12_
+Nets remaining: 24
+Keeping route for net _4_
+Finished routing net _17_
+Nets remaining: 22
+Finished routing net _8_
+Nets remaining: 21
+Keeping route for net _9_
+Finished routing net _10_
+Nets remaining: 19
+Finished routing net _11_
+Nets remaining: 18
+Finished routing net _3_
+Nets remaining: 17
+Keeping route for net _13_
+Finished routing net _14_
+Nets remaining: 15
+Finished routing net _15_
+Nets remaining: 14
+Finished routing net _0_
+Nets remaining: 13
+Finished routing net _16_
+Nets remaining: 12
+Finished routing net _1_
+Nets remaining: 11
+Finished routing net _2_
+Nets remaining: 10
+Keeping route for net Done
+Keeping route for net _19_
+Keeping route for net gnd
+Finished routing net _20_
+Nets remaining: 6
+Finished routing net _18_[1]
+Nets remaining: 5
+Finished routing net _21_
+Nets remaining: 4
+Finished routing net _22_
+Nets remaining: 3
+Finished routing net _18_[2]
+Nets remaining: 2
+
+----------------------------------------------
+Progress: Stage 3 total routes completed: 188
+No failed routes!
+----------------------------------------------
+*** Writing DEF file processor_9_bits_route.def
+emit_routes():  DEF file has 37 nets and 3 specialnets.
+but qrouter wants to write 38 nets and specialnets.
+----------------------------------------------
+Final: No failed routes!
+----------------------------------------------
+*** Writing RC file processor_9_bits_route.rc
+DEF2Verilog -v /home/mounir/Desktop/proc_9/synthesis/processor_9_bits.rtlnopwr.v -o /home/mounir/Desktop/proc_9/synthesis/processor_9_bits_postroute.v
+-p vdd -g gnd  -l  /usr/local/share/qflow/tech/osu050/osu050_stdcells.lef processor_9_bits_route.def
+
+Generating RTL verilog and SPICE netlist file in directory
+   /home/mounir/Desktop/proc_9/synthesis
+Running vlog2Verilog.
+vlog2Verilog -c -v vdd -g gnd -o processor_9_bits.rtl.anno.v processor_9_bits_postroute.v
+vlog2Verilog -c -p -v vdd -g gnd -o processor_9_bits.rtlnopwr.anno.v processor_9_bits_postroute.v
+/usr/local/share/qflow/bin/vlog2Verilog -c -b -p -n -v vdd -g gnd -o processor_9_bits.rtlbb.anno.v processor_9_bits_postroute.v
+Running vlog2Spice.
+vlog2Spice -i -l  /usr/local/share/qflow/tech/osu050/osu050_stdcells.sp -o processor_9_bits.anno.spc processor_9_bits.rtl.anno.v
+Router script ended on 01 يناير, 2025 +01 18:05:33

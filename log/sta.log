@@ -1,0 +1,149 @@
+Qflow static timing analysis logfile created on 01 يناير, 2025 +01 18:05:32
+Running vesta static timing analysis
+vesta --long processor_9_bits.rtlnopwr.v /usr/local/share/qflow/tech/osu050/osu05_stdcells.lib
+----------------------------------------------
+Vesta static timing analysis tool
+for qflow 1.4.104
+(c) 2013-2018 Tim Edwards, Open Circuit Design
+----------------------------------------------
+
+Parsing library "osu05_stdcells"
+End of library at line 6606
+Lib read /usr/local/share/qflow/tech/osu050/osu05_stdcells.lib:  Processed 6607 lines.
+Parsing module "processor_9_bits"
+Verilog netlist read:  Processed 242 lines.
+Number of paths analyzed:  6
+
+Top 6 maximum delay paths:
+Path _44_/CLK to _53_/D delay 1513.24 ps
+      0.0 ps        clock:        -> _44_/CLK
+    428.1 ps  Tcycle_Q[1]: _44_/Q -> _33_/B
+    727.7 ps         _12_: _33_/Y -> _34_/B
+    958.9 ps         IRin: _34_/Y -> _48_/A
+   1134.8 ps         _20_: _48_/Y -> _49_/C
+   1242.6 ps      _18_[1]: _49_/Y -> _53_/D
+
+   clock skew at destination = 0
+   setup at destination = 270.684
+
+Path _44_/CLK to _54_/D delay 1513.24 ps
+      0.0 ps        clock:        -> _44_/CLK
+    428.1 ps  Tcycle_Q[1]: _44_/Q -> _33_/B
+    727.7 ps         _12_: _33_/Y -> _34_/B
+    958.9 ps         IRin: _34_/Y -> _51_/A
+   1134.8 ps         _22_: _51_/Y -> _52_/C
+   1242.6 ps      _18_[2]: _52_/Y -> _54_/D
+
+   clock skew at destination = 0
+   setup at destination = 270.684
+
+Path _46_/CLK to _43_/D delay 1380.17 ps
+      0.0 ps        clock:        -> _46_/CLK
+    424.9 ps  Tcycle_Q[3]: _46_/Q -> _24_/A
+    591.8 ps          _5_: _24_/Y -> _25_/A
+    772.8 ps          _6_: _25_/Y -> _26_/C
+    960.4 ps          _7_: _26_/Y -> _32_/B
+   1092.1 ps          _3_: _32_/Y -> _43_/D
+
+   clock skew at destination = 0
+   setup at destination = 288.049
+
+Path _44_/CLK to _44_/D delay 1254.75 ps
+      0.0 ps        clock:        -> _44_/CLK
+    428.1 ps  Tcycle_Q[1]: _44_/Q -> _33_/B
+    727.7 ps         _12_: _33_/Y -> _36_/B
+    863.8 ps         _14_: _36_/Y -> _38_/A
+    978.9 ps          _0_: _38_/Y -> _44_/D
+
+   clock skew at destination = 0
+   setup at destination = 275.899
+
+Path _43_/CLK to _45_/D delay 961.081 ps
+      0.0 ps        clock:        -> _43_/CLK
+    440.8 ps  Tcycle_Q[0]: _43_/Q -> _39_/A
+    616.5 ps         _16_: _39_/Y -> _40_/A
+    706.1 ps          _1_: _40_/Y -> _45_/D
+
+   clock skew at destination = 0
+   setup at destination = 255.029
+
+Path _44_/CLK to _46_/D delay 858.594 ps
+      0.0 ps        clock:        -> _44_/CLK
+    428.1 ps  Tcycle_Q[1]: _44_/Q -> _41_/A
+    622.2 ps          _2_: _41_/Y -> _46_/D
+
+   clock skew at destination = 0
+   setup at destination = 236.392
+
+Computed maximum clock frequency (zero margin) = 660.833 MHz
+-----------------------------------------
+
+Number of paths analyzed:  6
+
+Top 6 minimum delay paths:
+Path _54_/CLK to _54_/D delay 230.799 ps
+      0.0 ps    clock:        -> _54_/CLK
+    162.3 ps     I[2]: _54_/Q -> _50_/A
+    252.8 ps     _21_: _50_/Y -> _52_/B
+    327.3 ps  _18_[2]: _52_/Y -> _54_/D
+
+   clock skew at destination = 0
+   hold at destination = -96.4851
+
+Path _54_/CLK to _44_/D delay 289.25 ps
+      0.0 ps  clock:        -> _54_/CLK
+    162.3 ps   I[2]: _54_/Q -> _25_/C
+    284.6 ps    _6_: _25_/Y -> _38_/B
+    384.2 ps    _0_: _38_/Y -> _44_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.9494
+
+Path _44_/CLK to _46_/D delay 325.125 ps
+      0.0 ps        clock:        -> _44_/CLK
+    280.6 ps  Tcycle_Q[1]: _44_/Q -> _41_/A
+    421.1 ps          _2_: _41_/Y -> _46_/D
+
+   clock skew at destination = 0
+   hold at destination = -95.9563
+
+Path _45_/CLK to _43_/D delay 347.047 ps
+      0.0 ps        clock:        -> _45_/CLK
+    236.2 ps  Tcycle_Q[2]: _45_/Q -> _28_/A
+    342.4 ps          _8_: _28_/Y -> _32_/A
+    441.2 ps          _3_: _32_/Y -> _43_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.1314
+
+Path _53_/CLK to _53_/D delay 391.686 ps
+      0.0 ps    clock:        -> _53_/CLK
+    299.3 ps     I[1]: _53_/Q -> _47_/A
+    413.0 ps     _19_: _47_/Y -> _49_/B
+    487.9 ps  _18_[1]: _49_/Y -> _53_/D
+
+   clock skew at destination = 0
+   hold at destination = -96.1866
+
+Path _43_/CLK to _45_/D delay 466.664 ps
+      0.0 ps        clock:        -> _43_/CLK
+    317.2 ps  Tcycle_Q[0]: _43_/Q -> _39_/A
+    476.2 ps         _16_: _39_/Y -> _40_/A
+    562.3 ps          _1_: _40_/Y -> _45_/D
+
+   clock skew at destination = 0
+   hold at destination = -95.6562
+
+Design meets minimum hold timing.
+-----------------------------------------
+
+Number of paths analyzed:  0
+
+Top 0 maximum delay paths:
+-----------------------------------------
+
+Number of paths analyzed:  0
+
+Top 0 minimum delay paths:
+-----------------------------------------
+
